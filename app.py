@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 3) Generate a bar chart using matplotlib, to start... 
 """
 
+# Must implement a series of checks; while True, try, except, must be string, etc. 
+
 punctuation_marks = [',', '.', '—', '-', ':', ';', '(', ')', "'", '[', ']', '{', '}', '...']
 sentence_ends = ['.', '!', '?']
 
