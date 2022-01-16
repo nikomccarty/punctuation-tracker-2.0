@@ -1,4 +1,5 @@
 import functions
+import matplotlib.pyplot as plt
 
 """
 1) Set up lists of punctuation marks to include. 
@@ -16,10 +17,50 @@ sentence_ends = ['.', '!', '?']
 
 test_string = "The gobbledy gook, I dare say, is abhorrent—but isn't that the price to pay, my love?"
 
+def strip_string(string):
+    list_string = list(string)
+    punctuations = []
+    for i in range(len(list_string)):
+        if list_string[i] in punctuation_marks or list_string[i] in sentence_ends:
+            punctuations.append(list_string[i])
+    punctuations_only = ''.join(str(x) for x in punctuations)
+    return punctuations_only
+
+def count_punctuation(string):
+    '''
+    Takes string as input. Calculates percentages for each punctuation type.
+    '''
+    total_punctuations = len(string)
+
+    counts = {}
+
+    for n in string:
+        keys = counts.keys()
+        if n in keys:
+            counts[n] += 1
+        else:
+            counts[n] = 1
+
+    return counts
+
+def make_plots(counts):
+    """
+    Requires frequency table, of type(dict), as input. 
+    Returns simple bar chart. 
+    """
+
+    plt.bar(*zip(*counts.items()))
+    plt.show()
+
+output_1 = strip_string(test_string)
+output_2 = count_punctuation(output_1)
+make_plots(output_2)
 
 
+# Write functions that:
+# Compute and return average number of spaces per sentence.
+# Cleanly print: Average sentence length, the output punctuation, and the charts.
 
-print(strip_string(test_string))
 
 
 """
