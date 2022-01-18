@@ -98,6 +98,7 @@ def make_bar_chart(counts):
     Returns simple bar chart. 
     """
     plt.bar(*zip(*counts.items()))
+    plt.ylabel('No. of occurrences')
     plt.show()
 
 def make_histogram(sentence_lengths):
