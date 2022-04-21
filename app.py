@@ -1,7 +1,8 @@
 '''
 TODO:
 # Must implement a series of checks; while True, try, except, must be string, etc. 
-# Check for weird spaces, gaps, tabs etc. and issue errors to user. Double spaces should count as a single space / split sentence. 
+# Check for weird spaces, gap
+# s, tabs etc. and issue errors to user. Double spaces should count as a single space / split sentence. 
 # Clean up and compartmentalize code. 
 # Write tests in pytest, for each function. 
 # Build streamlit app. See:
